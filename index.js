@@ -26,11 +26,11 @@ app.use("/api/products", productRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/carts", cartRoute);
 
-app.use(express.static(path.join(__dirname, "/client/build")));
+// app.use(express.static(path.join(__dirname, "/client/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+// });
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server is running on port 5000!");
